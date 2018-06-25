@@ -11,11 +11,24 @@
  * Identigiyng thre problem of the topic
 
     The main problem whit defining `this` and what exactly is `this` for most new js developers (which usualy have some OOP language background, for example like C#) comes from the fact that `this` points to the class in which `this` is used, in other words `this` points to itslef.
-    And that way of thinking is mostly right as long as we dont add some function calls left and right in the mix, and the `this` keyword magically becomes something like `undefined`, `window` (TODO check what happens in node) or whatever.  In  other words the fun part starts here. This will be mostly a demo based talk, so i will appriciate some life debugers if the demo goes south :D
+    And that way of thinking is mostly right as long as we dont add some function calls left and right in the mix, and the `this` keyword magically becomes something like `undefined`, `window` or `module`` (module is in node) or whatever.  In  other words the fun part starts here. This will be mostly a demo based talk, so i will appriciate some life debugers if the demo goes south :D
 
 
 # Main topic
- * What is `this` in js
+ * What is `this` in js and how we usualy use it
+
+  ** Open basic class creator
+ 
+ The most common and and intuitive way for creating a class in js (without worring about if we are using ecmascript 5 or older version) is by explicitly
+
+  `var Xapu = {
+  drink: 'beer',
+  whatDoIDrink: function () {
+        console.log(this.drink)
+        }
+  }`
+
+
 
     So now lets explore the different posibilities for the `this` keyword.
     (Disclaimer we wont dig too much in object creation)
