@@ -1,4 +1,4 @@
-let Ivan = {
+let Xapu = {
   drink: 'beer',
   whatDoIDrink: function () {
     console.log(this.drink)
@@ -8,7 +8,9 @@ let Ivan = {
   }
 }
 
-class JsAtendat {
+Xapu.whatDoIDrink()
+
+class JsPerson {
   constructor (drink) {
     this.drink = drink
   }
@@ -17,10 +19,11 @@ class JsAtendat {
   }
 }
 
+let pesho = new JsPerson('vodka')
+
+pesho.whatDoIDrink()
+
 function functionDrinker (drink) {
-  
-  
-  
   function whatDoIDrink () {
     console.log(this.drink)
   }
@@ -35,23 +38,15 @@ function functionDrinker (drink) {
   }
 }
 
-// console.log('HandMade')
-// this.drink = 'vodka'
-// Ivan.whatDoIDrink()
-// Ivan.whatArrowIdrink()
+function demo (drink) {
+  this.drink = drink
+  this.whatDoIDrink = function () {
+    console.log(this.drink)
+  }
+}
 
-// console.log('class creator')
-// let Pesho = new JsAtendat('Vodka')
+let sasho = new demo('gin')
+let gosho = new demo('rakia')
 
-// Pesho.whatDoIDrink()
-
-// console.log('functionCreated')
-let Gosho = functionDrinker('Rakia')
-Gosho.whatDoIDrink()
-Gosho.whatArrow()
-
-let demo1 = Gosho.whatDoIDrink
-let demo2 = Gosho.whatArrow
-
-demo1()
-demo2()
+sasho.whatDoIDrink()
+gosho.whatDoIDrink()
