@@ -86,21 +86,34 @@ vodka
 gin
 tequila
   ```
-  So here without any confusion we we are able to log our attendats drink, which is the cup that he is holding.
-  () 
+  So here without any confusion we we are able to log out some drinks, holded by different attendants and if that was everithing about this, no one would ever have
+  any trouble using it. Now let's see where the darama comes from using `this` and whats the difference between callSite and declarationSite/context.  
+  The root of the problem is that in JS we can easily pass function all around the place without thinking too much about it, unlike C# where you must have some knowlege 
+  about delegates or java  where you must use some utilities, which is pretty cool but in the common case, the new JS developers have some prior programing experience
+  and are learnig js on the move as they proceed whith their assigned tasks.
+  Lets see few examples of the things i'm talking about
 
-
-
-
-    So now lets explore the different posibilities for the `this` keyword.
-    (Disclaimer we wont dig too much in object creation)
-
+  // TODO create REACT && ANGULAR && NODE simple demos
+  // involve some counter in react and some service passing counter angular
+  // for node pass some data back and forth in modules
 
  * Diferences between function context and function call site
+
+  // TODO show the difference by using call apply and bind, in order to show that we can pass context ot the functions 
+
  * Why it is usefull to use this - pros and cons
+
+  // Explain the pros (we can use one method on many functions, this may be part of the call and apply demo)
+
  * Overview of call and apply
+
+
+// in the TODO up
  * Example in node
  * Example in vanila js with the DOM
  * Example with React
  * Example in Angular
+//
+
  * Arrow function
+// TODO refactor the demos with arrow functions
