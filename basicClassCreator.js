@@ -1,52 +1,58 @@
-let Xapu = {
-  drink: 'beer',
-  whatDoIDrink: function () {
-    console.log(this.drink)
-  },
-  whatArrowIdrink: () => {
-    console.log(this.drink)
-  }
+let xapu = {
+	drink: 'beer',
+	whatDoIDrink: function () {
+		console.log(this.drink)
+	}
 }
 
-Xapu.whatDoIDrink()
 
-class JsPerson {
-  constructor (drink) {
-    this.drink = drink
-  }
-  whatDoIDrink (params) {
-    console.log(this.drink)
-  }
+// Using class
+class PersonClass {
+	constructor(drink) {
+		this.drink = drink
+	}
+	whatDoIDrink() {
+		console.log(this.drink)
+	}
 }
 
-let pesho = new JsPerson('vodka')
+// Function - Old school class
 
+function personFunction(drink) {
+
+	function whatDoIDrink() {
+		console.log(this.drink)
+	}
+	whatArrow = () => {
+		console.log(drink)
+	}
+
+	return {
+		whatDoIDrink,
+		whatArrow,
+		drink
+	}
+}
+
+// Function with new keyword
+
+function PersonFunctionNew(drink) {
+	this.drink = drink
+
+	this.whatDoIDrink = function () {
+		console.log(this.drink)
+	}
+}
+// Let's call them all
+
+
+xapu.whatDoIDrink()
+
+let pesho = new PersonClass('vodka')
 pesho.whatDoIDrink()
 
-function functionDrinker (drink) {
-  function whatDoIDrink () {
-    console.log(this.drink)
-  }
-  whatArrow = () => {
-    console.log(drink)
-  }
-
-  return {
-    whatDoIDrink,
-    whatArrow,
-    drink
-  }
-}
-
-function demo (drink) {
-  this.drink = drink
-  this.whatDoIDrink = function () {
-    console.log(this.drink)
-  }
-}
-
-let sasho = new demo('gin')
-let gosho = new demo('rakia')
-
-sasho.whatDoIDrink()
+let gosho = personFunction('gin')
 gosho.whatDoIDrink()
+
+let ivan = new PersonFunctionNew('tequila')
+ivan.whatDoIDrink()
