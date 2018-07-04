@@ -86,12 +86,8 @@ vodka
 gin
 tequila
   ```
-  So here without any confusion we we are able to log out some drinks, holded by different attendants and if that was everithing about this, no one would ever have
-  any trouble using it. Now let's see where the darama comes from using `this` and whats the difference between callSite and declarationSite/context.  
-  The root of the problem is that in JS we can easily pass function all around the place without thinking too much about it, unlike C# where you must have some knowlege 
-  about delegates or java  where you must use some utilities, which is pretty cool but in the common case, the new JS developers have some prior programing experience
-  and are learnig js on the move as they proceed whith their assigned tasks.
-  Lets see few examples of the things i'm talking about
+  So here without any confusion we we are able to call some function/methods log out some drinks, holed by different attendants and if that was everything about this, no one would ever have any trouble understanding it. Now let's see where the drama comes from using `this` and what's the difference between callSite and declarationSite/context.  
+  The root of the problem is that in JS we can easily pass function all around the place without thinking too much about it, unlike C# where you must have some knowledge about delegates or java  where you must use some utilities, which is pretty cool but in the common case, the new JS developers have some prior programming experience and are learning js on the move as they proceed with their assigned tasks. Lets see few examples of the things I'm talking about
 
   // TODO create REACT && ANGULAR && NODE simple demos
   // involve some counter in react and some service passing counter angular
